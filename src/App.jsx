@@ -1,13 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import AllData from "./Components/AllData";
-import BasicExample from "./Components/Form";
+import AllUsers from "./Pages/AllUsers";
+import appRouter from "./Utils/AppRoutes";
+import { Form } from "react-bootstrap";
+// import { RouterProvider, createBrowserRouter } from "react-router";
 
 function App() {
+  // const router = createBrowserRouter(appRouter);
+
   return (
     <>
-      <AllData />
-      <BasicExample />
+      {/* <RouterProvider router={router} /> */}
+      <AllUsers />
     </>
   );
 }

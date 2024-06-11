@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+.form {
+  margin-top: 20px;
+  /* From https://css.glass */
+  background: rgba(45, 49, 49, 0.41);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.2px);
+  -webkit-backdrop-filter: blur(10.2px);
+  border: 1px solid rgba(45, 49, 49, 0.29);
 }
