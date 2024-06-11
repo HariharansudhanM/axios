@@ -12,6 +12,13 @@ import { userContext } from "../Context/UserProvider";
 function AllUsers() {
   let { userData, setUserData, setEdit, edit } = useContext(userContext);
 
+  let fetchData = async () => {
+    const res = await axios.get(
+      "https://66685f46f53957909ff7c0ce.mockapi.io/users/users"
+    );
+
+    setUserData(() => [...res.data]);
+  };
   ////Edit
   async function handleEdit(id) {
     setEdit(() => !edit);
@@ -100,7 +107,7 @@ function AllUsers() {
               `https://66685f46f53957909ff7c0ce.mockapi.io/users/users`,
               values
             );
-            setUserData(() => [...userData, values]);
+            // setUserData(() => [...userData, values]);
             setValues({
               id: "",
               name: "",
@@ -108,6 +115,8 @@ function AllUsers() {
               email: "",
               phone: "",
             });
+
+            fetchData();
           } catch (error) {
             console.log(error);
           }
